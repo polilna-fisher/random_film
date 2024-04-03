@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+.random_section {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+}
+.random_container {
+    width: 1290px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 50px;
+    padding: 10px;
+    position: relative;
+}
+.random_container_inner_left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 171px;
+    width: 100%;
+    min-height: 380px;
+
+}
+.random_container_inner_center{
+    text-align: left;
+    min-width: 400px;
+    width: 100%;
+    min-height: 380px;
+
+}
+.random_container_inner_right{
+    min-width: 300px;
+    min-height: 380px;
+}
+.random_text_bold{
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.random_text{
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+.random_button{
+    height: 47px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(217, 203, 117);
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+}
+.random_poster{
+    width: 287px;
+    height: 372px;
+}
+.random_stars_icons{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+
+}
+.random_loading_container{
+    min-height: 380px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+
+}
+.random_loading_text{
+    font-family: 'Bad Script', sans-serif;
+    font-weight: 500;
+    font-size: 70px;
+    color: white;
+}
+.random_loading_icon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}

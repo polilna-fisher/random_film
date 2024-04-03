@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+.top_film_section {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+}
+.top_film_container{
+    width: 1290px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 50px;
+    padding: 10px;
+    position: relative;
+}
+.top_film_item{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.top_film_icon{
+    width: 219px;
+    min-height: 100%;
+}
+.top_film_info{
+    text-align: left;
+}
+.top_film_text_bold{
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.top_film_text{
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+.list_favourite_icon{
+    width: 50px;
+    height: 50px;
+}
+.list_favourite_link{
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}
+.top_film_button{
+    height: 47px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(217, 203, 117);
+    padding: 20px;
+}
+.top_film_header{
+    font-family: 'Bad Script', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+}
+.top_film_select{
+    font-family: 'Bad Script', sans-serif;
+    font-weight: 500;
+    font-size: 37px;
+    color: white;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: black;
+    border-radius: 12px;
+    height: 80px;
+}
+.top_film_option{
+    font-family: 'Bad Script', sans-serif;
+    font-weight: 500;
+    font-size: 37px;
+    color: white;
+}

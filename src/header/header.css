@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+.header_section {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+
+}
+.header_container {
+    width: 1290px;
+    /*background-color: bisque;*/
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    position: relative;
+}
+.header_text{
+    font-family: 'Bad Script', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    color: white;
+}
+.header_icon{
+    width: 40px;
+    height: 40px;
+}
+.header_icon_star{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 455px;
+}
+.header_icon_moon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 72px;
+    left: 800px;
+}

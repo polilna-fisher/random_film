@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+.film_container_common{
+    display: flex;
+    gap: 60px;
+    position: relative;
+}
+.film_parameters_container{
+
+}
+.film_poster_container{
+
+}
+.film_text_bold{
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.film_text{
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+.film_poster{
+    width: 278px;
+    height: 372px;
+}
+.film_button{
+    height: 47px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(217, 203, 117);
+    font-family: 'Bona Nova', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    /*min-width: 25px;*/
+    width: 100%;
+}
+.film_stars_icons{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+.film_stars_icons_big{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
