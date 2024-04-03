@@ -13,8 +13,8 @@ const RandomFilm: FC = () => {
     const [disabled, setDisabled] = useState(false)
     const dispatch = useDispatch()
     const randomData = useAppSelector(state => state.films.randomFilm)
-    const loading = useAppSelector(state => state.films.loading)
-    const error = useAppSelector(state => state.films.error)
+    const loading = useAppSelector(state => state.films.loadingRandom)
+    const error = useAppSelector(state => state.films.errorRandom)
 
     const addTheNumberOfVisitors = () => {
         setTime(time + 1)

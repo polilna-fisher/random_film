@@ -10,7 +10,7 @@ export function* getRandomFilmSaga() {
         const payload:IFilm = yield call(getRandomTitle)
         yield put(filmsActions.fetchRandomFilmSuccess(payload))
     }catch (e){
-        yield put(filmsActions.fetchFilmError())
+        yield put(filmsActions.fetchRandomFilmError())
     }
 
 }
@@ -19,7 +19,7 @@ export function* getFilteredFilm(action: PayloadAction<any>):Generator<any>{
         const payload:any = yield call(getFilteredTitle, action.payload)
         yield put(filmsActions.fetchFilteredFilmSuccess(payload))
     }catch (e){
-        yield put(filmsActions.fetchFilmError())
+        yield put(filmsActions.fetchFilteredFilmError())
     }
 }
 
@@ -28,7 +28,7 @@ export function* getTopFilms(action: PayloadAction<any>):Generator<any>{
         const payload:any = yield call(getTopList, action.payload)
         yield put(filmsActions.fetchTopFilmsSuccess(payload))
     }catch (e){
-        yield put(filmsActions.fetchFilmError())
+        yield put(filmsActions.fetchTopFilmError())
     }
 }
 

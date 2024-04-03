@@ -17,13 +17,18 @@ interface ICountry{
 }
 export interface InitialState{
     randomFilm: IFilm | null | undefined,
-    loading: boolean,
-    error: boolean,
+    loadingRandom: boolean,
+    errorRandom: boolean,
+    loadingFiltered: boolean,
+    errorFiltered: boolean,
+    loadingTop: boolean,
+    errorTop: boolean,
     filteredFilm: IFilm | null | undefined,
     topFilms: IFilm[] | null | undefined,
     page:number,
     selectedFilmsList:Array<number> | [] | Array<any>
 }
+
 export interface IFilmsList{
     docs: IFilm[],
     total: number,

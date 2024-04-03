@@ -2,10 +2,14 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IFilm, IFilters, InitialState, ITopFilters} from "../types/types";
 
 const initialState: InitialState = {
-    loading: true,
-    error: false,
+    loadingRandom: true,
+    errorRandom: false,
     randomFilm: null,
+    loadingFiltered: true,
+    errorFiltered: false,
     filteredFilm: null,
+    loadingTop: true,
+    errorTop: false,
     topFilms: null,
     page: 1,
     selectedFilmsList: []
@@ -17,35 +21,43 @@ export const filmsSlice = createSlice(
         initialState,
         reducers: {
             fetchRandomFilm: (state) => {
-                state.loading = true;
-                state.error = false
+                state.loadingRandom = true;
+                state.errorRandom = false
             },
             fetchRandomFilmSuccess: (state, action) => {
-                state.loading = false;
-                state.error = false;
+                state.loadingRandom = false;
+                state.errorRandom = false;
                 state.randomFilm = action.payload
             },
-            fetchFilmError: (state) => {
-                state.loading = false;
-                state.error = true
+            fetchRandomFilmError: (state) => {
+                state.loadingRandom = false;
+                state.errorRandom = true
             },
             fetchFilteredFilm: (state, _action:PayloadAction<IFilters>) => {
-                state.loading = true;
-                state.error = false
+                state.loadingFiltered = true;
+                state.errorFiltered = false
             },
             fetchFilteredFilmSuccess: (state, action) => {
-                state.loading = false;
-                state.error = false;
+                state.loadingFiltered = false;
+                state.errorFiltered = false;
                 state.filteredFilm = action.payload
             },
+            fetchFilteredFilmError: (state) => {
+                state.loadingFiltered = false;
+                state.errorFiltered = true
+            },
             fetchTopFilms: (state, _action:PayloadAction<ITopFilters>) => {
-                state.loading = true;
-                state.error = false
+                state.loadingTop = true;
+                state.errorTop = false
             },
             fetchTopFilmsSuccess: (state, action) => {
-                state.loading = false;
-                state.error = false;
+                state.loadingTop = false;
+                state.errorTop = false;
                 state.topFilms = state.topFilms ? [...state.topFilms, ...action.payload] : action.payload
+            },
+            fetchTopFilmError: (state) => {
+                state.loadingTop = false;
+                state.errorTop = true
             },
             changePage: (state, action) => {
                 state.page = action.payload
