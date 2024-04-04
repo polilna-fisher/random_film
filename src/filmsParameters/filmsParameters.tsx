@@ -1,4 +1,4 @@
-import {FC, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import './filmsParameters.css'
 import {useDispatch} from "react-redux";
 import {filmsActions} from "../redux/slice";
@@ -7,10 +7,13 @@ import {filmsActions} from "../redux/slice";
 const FilmsParameters:FC = () => {
     const [year, setYear] = useState()
     const [country, setCountry] = useState('')
-    const [genre, setGenre] = useState()
-    const [type, setType] = useState()
+    const [genre, setGenre] = useState('драма')
+    const [type, setType] = useState(1)
     const dispatch = useDispatch()
 
+    useEffect(() => {
+        dispatch(filmsActions.fetchFilteredFilm({type: type, year: year, genre: genre, country: country}))
+    },[])
 
     const loadFilmByParameters = () => {
         dispatch(filmsActions.fetchFilteredFilm({type: type, year: year, genre: genre, country: country}))
@@ -21,17 +24,17 @@ const FilmsParameters:FC = () => {
             <select name="type" id="type-select" className='parameters_select' onChange={(e) => {
                 setType(():any => e.target.value)
             }}>
-                <option value="default" className='select_text'>Выберите тип фильма</option>
+                {/*<option value="default" className='select_text'>Выберите тип фильма</option>*/}
                 <option value="1" className='select_text'>Фильм</option>
                 <option value="2" className='select_text'>Сериал</option>
                 <option value="3" className='select_text'>Мультфильм</option>
                 <option value="5" className='select_text'>Мультсериал</option>
                 <option value="4" className='select_text'>Аниме</option>
             </select>
-            <select name="genre" id="genre-select" className='parameters_select' onChange={(e) => {
+            <select name="genre" id="genre-select" className='parameters_select'  onChange={(e) => {
                 setGenre(():any => e.target.value)
             }}>
-                <option value="default" className='select_text'>Выберите жанр</option>
+                {/*<option value="default" className='select_text'>Выберите жанр</option>*/}
                 <option value="драма" className='select_text'>Драма</option>
                 <option value="комедия" className='select_text'>Комедия</option>
                 <option value="мелодрама" className='select_text'>Мелодрама</option>

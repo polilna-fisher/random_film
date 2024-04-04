@@ -39,6 +39,40 @@ const TopFilms: FC = () => {
                     <option value="top250" className='top_film_option'>Топ 250 фильмов</option>
                     <option value="selected" className='top_film_option'>Избранные фильмы</option>
                 </select>
+
+                {listType === 'top250'
+                    ? topList?.map(item => {
+                        return (
+                            <FilmItem key={item.id}
+                                      id={item.id}
+                                      type={item.type}
+                                      name={item.name}
+                                      description={item.description}
+                                      poster={item.poster}
+                                      genres={item.genres}
+                                      countries={item.countries}
+                                      rating={item.rating}/>
+                        )
+                    })
+                    : null}
+                {
+                    listType === 'selected'
+                        ? selectedList?.map(item => {
+                            return (
+                                <FilmItem key={item.id}
+                                          id={item.id}
+                                          type={item.type}
+                                          name={item.name}
+                                          description={item.description}
+                                          poster={item.poster}
+                                          genres={item.genres}
+                                          countries={item.countries}
+                                          rating={item.rating}/>
+                            )
+                        })
+                        : null
+                }
+
                 {loading
                     ? <div className='random_loading_container'>
                         <h3 className='random_loading_text'>Loading</h3>
@@ -65,42 +99,7 @@ const TopFilms: FC = () => {
                     </div>
                     : null
                 }
-                {(!loading &&!error)
-                    ? listType === 'top250'
-                        ? topList?.map(item => {
-                            return (
-                                <FilmItem key={item.id}
-                                          id={item.id}
-                                          type={item.type}
-                                          name={item.name}
-                                          description={item.description}
-                                          poster={item.poster}
-                                          genres={item.genres}
-                                          countries={item.countries}
-                                          rating={item.rating}/>
-                            )
-                        })
-                        : null
-                    : null
-                }
 
-                {
-                    listType === 'selected'
-                        ? selectedList?.map(item => {
-                            return (
-                                <FilmItem key={item.id}
-                                          id={item.id}
-                                          type={item.type}
-                                          name={item.name}
-                                          description={item.description}
-                                          poster={item.poster}
-                                          genres={item.genres}
-                                          countries={item.countries}
-                                          rating={item.rating}/>
-                            )
-                        })
-                        : null
-                }
                 {(!loading && !error)
                     ? <button className='top_film_button' onClick={() => loadOtherFilms()}> Показать еще</button>
                     : null

@@ -38,7 +38,7 @@ const FilmsList: FC = () => {
                     }
                     {error
                         ? <div className='random_loading_container'>
-                            <h3 className='random_loading_text'>Error</h3>
+                            <h3 className='random_loading_text'>Ничего не найдено</h3>
                             <img alt='loading' src={StarIcon} className='random_loading_icon'
                                  style={{top: 196, right: -30}}/>
                             <img alt='loading' src={StarIcon} className='random_loading_icon'
