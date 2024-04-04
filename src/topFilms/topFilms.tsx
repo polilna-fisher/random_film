@@ -101,7 +101,7 @@ const TopFilms: FC = () => {
                 }
 
                 {(!loading && !error)
-                    ? <button className='top_film_button' onClick={() => loadOtherFilms()}> Показать еще</button>
+                    ? <button className='top_film_button_load' onClick={() => loadOtherFilms()}> Показать еще</button>
                     : null
                 }
 

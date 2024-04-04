@@ -54,7 +54,7 @@
     width: fit-content;
     height: fit-content;
 }
-.top_film_button{
+.top_film_button_load{
     height: 72px;
     border-radius: 12px;
     cursor: pointer;
@@ -63,6 +63,7 @@
     font-weight: 500;
     font-size: 20px;
     color: black;
+    padding: 20px;
 }
 .top_film_header{
     font-family: 'Bad Script', sans-serif;
